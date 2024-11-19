@@ -1,10 +1,10 @@
 # Demo of a python project packaged with uv
 
-The repository demonstrates following uv features:
- -  use a dedicated python version per project
- -  isolate 3rd party packages per project 
- -  cross platform deterministic locking 
- -  sing semantic versioning policy and upgrade backwards compatible changes
+Showcases how uv is used for:
+ -  configuring a dedicated python version per project
+ -  isolating 3rd party packages per project 
+ -  cross platform deterministic locking
+ -  package upgrades within semver policy
  -  dependabot automatic dependency upgrades
 
 NOTE: Dependabot currently does neither support uv.lock nor uv pip compile (See [dependabot-core#10478](https://github.com/dependabot/dependabot-core/issues/10478)).
