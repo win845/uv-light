@@ -7,6 +7,6 @@ requires-python = ">=3.12"
 dependencies = [
     "flask==3.*",
     "pandas==2.*",
-    "pyarrow==17.*",
+    "pyarrow==18.*",
     "pytest>=8.3.3",
 ]
