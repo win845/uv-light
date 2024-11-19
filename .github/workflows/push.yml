@@ -1,0 +1,40 @@
+name: On Push Workflow
+
+on:
+  push:
+
+jobs:
+  uv-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
+
+    - name: UV sync
+      id: uv-sync
+      # a new commit will not trigger this workflow again
+      run: |
+        pipx install uv
+        ./bin/uv-sync.sh
+
+  build:
+    runs-on: ubuntu-latest
+    needs: uv-sync
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install UV
+        run: |
+          pipx install uv
+
+      - name: Run tests
+        run: |
+          uv run pytest tests
