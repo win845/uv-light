@@ -8,7 +8,7 @@ Showcases how uv is used for:
  -  dependabot automatic dependency upgrades
 
 NOTE: Dependabot currently does neither support uv.lock nor uv pip compile (See [dependabot-core#10478](https://github.com/dependabot/dependabot-core/issues/10478)).
-A workaround is implemented for simulating pip-compile workflow (See [check-uv.sh](./bin/check-uv.sh) and [workflows/push.yml](.github/workflows/push.yml])).
+A workaround is implemented for simulating pip-compile workflow (See [check-uv.sh](./bin/uv-sync.sh) and [workflows/push.yml](.github/workflows/push.yml)).
 
 Run with:
 
